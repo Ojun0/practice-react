@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+// ! 하나만 치면 기본 세팅 해준다
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example-1</title>
+    <link rel="stylesheet" href="index.css"></href>
+    <script src="main.js" defer></script>
+    <!-- defer=다운로드 받고 바로 실행하지 않고 모든 파일이 다 실행된 뒤 실행-->
+</head>
+<body>
+    <header>
+        <h1>소프트웨어개발실습2</h1>
+    </header>
+    <!-- header section footer 로 나눔-->
+    <section>
+        <p id = "hello">HELLO, JavaScript!</p>
+        <div>
+            <input id = text1 type="text" placeholder="cahnge botton"> 
+            <!--placeholder는 빈칸 힌트 -->
+            <input id="btn1" type="button" value="change text" onclick="changetext()">
+            <!--value는 버튼 이름, onclick 이벤트리스너-->
+        </div>
+        <!--블록 설정은 div--> 
+        <div>
+            <input id="color1" type="color">
+            <input id="btn2" type="button" value="change color" onclick="changecolor()">
+        </div>
+    </section>
+    <footer>
+        <h3>동서대학교 소프트웨어융합대학</h3>
+    </footer>
+    <!--<script>
+        function changetext(){
+            //var text1 = document.getElementById("text1");
+            //Dom 객체 이름 = document
+            var s = document.getElementById("change").value;
+            //value 값에 접근
+            var hello = document.getElementById('hello');
+            hello.innerText = s;
+
+        
+        }
+        function changecolor(){
+            document.getElementById("color1").value;
+            document.getElementById('hello').style.color = color;
+            //style을 바꿀려면 style 접근
+        }
+    </script>-->
+</body>
+</html>
