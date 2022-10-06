@@ -25,8 +25,26 @@ const element2 = React.createElement(
     )
 )
 
+//Component
+function Subject(props){//컴포넌트는 대문자로 시작하는게 관례
+    return React.createElement(
+        'li',
+        {class: 'subject'},
+        props.subject
+    );//element를 리턴
+}//list의 content를 바꾸는 component
 
-
+const element3 = React.createElement(
+    'ul',
+    {id: 'subject'},
+    Subject({subject: 'HTML5 Programing'}),
+    Subject({subject: 'ESL'}),
+    React.createElement(
+        Subject,
+        {subject: ' Es6'},
+        null
+    )
+);
 //React v17-
 //const root = document.querySelector('#root');//getElementId 대신 사용 id 클래스 등등 다 사용가능
 //ReactDOM.render(element. root);
