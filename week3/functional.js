@@ -26,7 +26,8 @@ console.log(userList, userList2)
 const userList3 = userList.map(user => `<li>${user.name}, ${user.point}</li>`);
 console.log(userList, userList3);
 
-userList.filter(user => user.point>=100).map(user => `<li>${user.name}, ${user.point} </li>`);
+const userList4 = userList.filter(user => user.point>=100).map(user => `<li>${user.name}, ${user.point} </li>`);
+console.log(userList, userList4);
 
 //Array.reduce(변환함수, 초기값); 배열 -> 문자열, 객체, 배열 any 아무거나 다 변환 가능하다 .
 // 이전의 결과 값과 뭐 하나더 다음 아이템에 적용 될 결과 값을 리턴
