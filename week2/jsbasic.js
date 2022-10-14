@@ -1,7 +1,4 @@
 //input & output
-/*var s = prompt('Enter text');
-alert(s);
-console.log(s);*/
 
 //Variables
 var v = 'string';
@@ -82,12 +79,12 @@ const person = {
     lastName : "Hong",
     age : 23
 };
-/*for(key in person){
-    console.log(key+ ':' person[key]);
+for(key in person){
+    console.log(key+ ':', person[key]);
     console.log(`${key} :  
           ${person[key]}`); // 문자열이 많은 경우 이 방법을 사용함    공백, 줄바꿈도 인식 
 
-} */
+} 
 
 const arr = [1, 2, 3, 4 ,5];
 for(item of  arr){
@@ -125,6 +122,7 @@ greeting3('oh');
 const greeting4 = (name, greetings='hello') => // 2줄 이상일 경우 {}호가 필요하다, return이 필요없다
     ({name:name, greeting:greetings}); //()를 넣는 이유는 {}가 함수꺼인지 객체꺼인지 인식을 못하기 떄문
 greeting4('lee');
+console.log(`${greeting4}`);
 
 
 //Desturcting (obj)
@@ -151,6 +149,8 @@ console.log(`hello ${lastName}, ${firstName}`);
 //spread operator
 const user3 = {...user1, ...user2, gender: 'male'}; //2개의 객체를 user3에 묶어줌, 구조분해로 인해 추가적인 프로퍼티도 넣을 수 있음, 기존 값을 변환도 가능
 const user4 = {...user1, firstName: 'Gil'}; //user4에 user1 데이터를 다 가져온 다음 fisrtname만 gil로 바꿔줌
+console.log(user3);
+console.log(user4);
 
 const {age, ...user5} = user1; //user1 데이터 중 age만 뺴고 user5에 저장
 console.log(user5);
@@ -171,7 +171,7 @@ console.log(`${item3}, ${item4}`);
 const numbers3 = [...numbers, ...numbers2]; // 위 numbers1, 2 배열을 새로운 배열 numbers3에 넣는 식
 const [fist, ...numbers4] = numbers; //첫번쨰 값만 저장되고? 나머지 값들은 numbers4에 저장됨
 console.log(numbers4);
-console.log(numbers);
+console.log(numbers3);
 
 
 function firstnumber(first, ...rest) { //첫번쨰 값만 받고 나머지는 rest 변수에 배열 형태로 들어감
