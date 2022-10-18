@@ -219,3 +219,14 @@ class Member extends Person{ //상속
 
 const myMemver = new Member('0001', 'kim', 21);
 console.log(myMemver);
+
+//pure function 순수함수
+/* 동일한 입력 값에 대하여 항상 동일한 출력을 반환하는 함수
+외부의 상태를 변경하거나 영향을 받지 않는 함수*/
+
+//high order function 고차 함수
+/*  함수를 안자로 받거나 함수를 출력으로 반환하는 함수 map, filter, reduce */ 
+
+//immmutable 불변성
+/* 생성 후 그 상태를 바꿀 수 없는 객체 
+let은 재 할당이 가능하다 하지만 const는 재선언 및 재할달이 불가능하다*/
