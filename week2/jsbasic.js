@@ -179,6 +179,7 @@ function firstnumber(first, ...rest) { //첫번쨰 값만 받고 나머지는 re
 };
 firstnumber(1, 2, 3, 4, 5);
 
+
 //object literal enhancement
 const name =  'kim gildong';
 const tel = '01076598182';
@@ -204,7 +205,7 @@ class Person{
 }
 
 const person1 = new Person('hong', 21);
-person1.println();
+console.log(person1);
 
 class Member extends Person{ //상속
     constructor(id, name, age){
@@ -217,4 +218,4 @@ class Member extends Person{ //상속
 }
 
 const myMemver = new Member('0001', 'kim', 21);
-myMemver.print();
+console.log(myMemver);
