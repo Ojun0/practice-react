@@ -120,9 +120,9 @@ greeting3('oh');
 
 
 const greeting4 = (name, greetings='hello') => // 2줄 이상일 경우 {}호가 필요하다, return이 필요없다
-    ({name:name, greeting:greetings}); //()를 넣는 이유는 {}가 함수꺼인지 객체꺼인지 인식을 못하기 떄문
+    console.log({name:name, greeting:greetings}); //()를 넣는 이유는 {}가 함수꺼인지 객체꺼인지 인식을 못하기 떄문
     greeting4('lee');
-    console.log(greeting4);
+    
 
 //Desturcting (obj)
 const user1 ={
@@ -178,6 +178,7 @@ function firstnumber(first, ...rest) { //첫번쨰 값만 받고 나머지는 re
 
 };
 firstnumber(1, 2, 3, 4, 5);
+
 
 
 //object literal enhancement
