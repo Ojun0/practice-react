@@ -8,7 +8,7 @@ class Counter2 extends React.Component{
     }
 
     changeNum(){
-        const newNum = this.state.num+1;
+        const newNum = this.state.num+1; //무조건 객체형으로 된다
         this.setState({num: newNum});   
     }
 

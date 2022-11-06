@@ -6,7 +6,7 @@ function changetext(){
     //Dom 객체 이름 = document
     var s = document.getElementById("text1").value;
     //value 값에 접근
-    var hello = document.getElementById('hello');s
+    var hello = document.getElementById('hello');
     hello.innerText = s;
 
 

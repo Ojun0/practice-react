@@ -7,7 +7,7 @@ console.log(s);
 const userList = [
         {name : 'hong', point : 100},
         {name : 'kim', point : 30},
-        {name : 'Oh', point : 500},
+        {name : 'Oh', point : 50},
         {name : 'park', point : 80} // 객페
 ]
 
