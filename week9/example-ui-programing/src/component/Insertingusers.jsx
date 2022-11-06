@@ -6,7 +6,7 @@ const Insertingusers = (props) => {
     const [name, setName] = useState('');
     const [point, setPoint] = useState('0');
 
-    function removeeUser(event){
+    function removeUser(event){
         props.onInsert({id, name, point});
         event.preventDefault();
     };

@@ -8,7 +8,7 @@ const ListingUsers = (props) => {
                 (user)=>(
                     <div key={user.id}>
                         <span> {user.name}, {user.name}, {user.point}</span>
-                        <button onClick={() => props.onDelete(user.id)}></button>
+                        <button onClick={() => props.onDelete(user.id)}>삭제</button>
                     </div>
                 )
             )}

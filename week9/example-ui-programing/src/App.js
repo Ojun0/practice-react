@@ -15,8 +15,8 @@ function App() {
 ];
   const [users, setUsers] =useState(userList)
 
-  function deleteUser(user){
-    const newUsers = users.filter((user) => (users !== user ))
+  function deleteUser(id){
+    const newUsers = users.filter((user) => (id !== user.id ))
     setUsers(newUsers); 
 };
 

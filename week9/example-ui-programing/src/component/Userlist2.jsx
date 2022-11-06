@@ -21,10 +21,8 @@ class Userlist2 extends Component {
         this.setState({users: newUsers});
     }
 
-    function insertUser(user){
-        const newUsers = [...users, user];
-        setUsers(newUsers);
-    };
+    
+    
             render() {
                  return (
                     <div>
