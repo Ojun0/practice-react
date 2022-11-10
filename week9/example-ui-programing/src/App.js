@@ -34,3 +34,5 @@ function App() {
 }
 
 export default App;
+
+//단일 책임 원칙 - 컴포넌트 하나는 하나의 기능만 쓰자
