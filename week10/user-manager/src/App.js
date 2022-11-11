@@ -4,7 +4,7 @@ import Footer from './component/Footer.jsx';
 import UserList from './component/UserList';
 import UserInputForm from './component/UserInputForm';
 import {useState} from 'react';
-import userDate from './data/user-data.json';
+import userData from './data/user-data.json';
 import {v4} from 'uuid';
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
     );
     setUsers(newUsers);
   };
+
   const addUser = (name, point) => {
     const newUsers = {id: v4(), name:name, point:point};
     setUsers([...users, newUsers]);
@@ -31,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <Header title='User Management System'></Header>
-      <UserList users={users} onRemobeUser={removeUser} onUpdateUser={updateUser}></UserList>
+      <UserList users={users} onRemoveUser={removeUser} onUpdateUser={updateUser}></UserList>
       <UserInputForm onAddUser={addUser}></UserInputForm>
       <Footer copyright='소프트웨어개발실습'></Footer>
     </div>
