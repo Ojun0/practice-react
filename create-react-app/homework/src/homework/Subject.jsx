@@ -12,3 +12,4 @@ function Subject(){
 }
 
 export default Subject;
+//export로 외부에 쓸 수 있도록 만들어줌
