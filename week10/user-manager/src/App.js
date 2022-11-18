@@ -1,11 +1,13 @@
 import "./App.css";
-import Header from "./component/Header.jsx";
-import Footer from "./component/Footer.jsx";
-import UserList from "./component/UserList";
-import UserInputForm from "./component/UserInputForm";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import UserList from "./components/UserList";
+import UserInputForm from "./components/UserInputForm";
 import { useState } from "react";
 import userData from "./data/user-data.json";
 import { v4 } from "uuid";
+import { ThemeProvider } from "./components/ThemeProvider"; //두개가 넘어오는데 하나만 받기위해 구조분해를 사용
+import Flexboxtext from "./components/Flexboxtext";
 
 function App() {
   const [users, setUsers] = useState(userData.userList);
@@ -16,8 +18,8 @@ function App() {
   };
 
   const addUser = (name, point) => {
-    const newUsers = { id: v4(), name: name, point: point };
-    setUsers([...users, newUsers]);
+    const newUser = { id: v4(), name, point };
+    setUsers([...users, newUser]);
   };
 
   const updateUser = (id, name, point) => {
@@ -29,14 +31,17 @@ function App() {
 
   return (
     <div className="App">
-      <Header title="User Management System"></Header>
-      <UserList
-        users={users}
-        onRemoveUser={removeUser}
-        onUpdateUser={updateUser}
-      ></UserList>
-      <UserInputForm onAddUser={addUser}></UserInputForm>
-      <Footer copyright="소프트웨어개발실습"></Footer>
+      <ThemeProvider>
+        <Header title="User Management System"></Header>
+        <UserList
+          users={users}
+          onRemoveUser={removeUser}
+          onUpdateUser={updateUser}
+        ></UserList>
+        <UserInputForm onAddUser={addUser}></UserInputForm>
+        <Footer copyright="소프트웨어개발실습2"></Footer>
+      </ThemeProvider>
+      <Flexboxtext></Flexboxtext>
     </div>
   );
 }
