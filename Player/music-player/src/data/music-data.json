@@ -1,0 +1,30 @@
+{
+  "playList1": [
+    {
+      "title": "Love dive",
+      "artist": "ive",
+      "url": "https://youtu.be/Y8JFxS1HlDo"
+    },
+    {
+      "title": "antifragile",
+      "artist": "le sserafim",
+      "url": "https://www.youtube.com/watch?v=pyf8cbqyfPs"
+    },
+    {
+      "title": "impurities",
+      "artist": "le sserafim",
+      "url": "https://youtu.be/CnNJtnoSU5U"
+    },
+    {
+      "title": "hype boy",
+      "artist": "new jeans",
+      "url": "https://youtu.be/Rrf8uQFvICE"
+    },
+    {
+      "title": "attention",
+      "artist": "new jeans",
+      "url": "https://youtu.be/js1CtxSY38I"
+    }
+  ],
+  "playList2": {}
+}
