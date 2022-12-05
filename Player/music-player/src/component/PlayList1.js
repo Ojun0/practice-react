@@ -22,7 +22,9 @@ function PlayList1({
     <div>
       <h1>{PlayList}</h1>
       <p>
-        <Link to="/add1"> 노래 추가하기</Link>
+        <Link to="/add1" style={{ textDecoration: "none" }}>
+          노래 추가하기
+        </Link>
       </p>
       <Search
         type="text"
