@@ -4,6 +4,8 @@ import PlayList1 from "./component/PlayList1";
 import PlayList2 from "./component/PlayList2";
 import musicdata from "./data/music-data.json";
 import PlayListInfo from "./component/PlayListInfo";
+import { Routes, Route } from "react-router-dom";
+import Home from "./component/Home";
 // import styled from "styled-components";
 
 function App() {
@@ -40,14 +42,28 @@ function App() {
   return (
     <div className="App">
       {/* <Card> */}
-      <PlayList1
-        musics={musics}
-        PlayList="PlayList1"
-        onRemoveMusic={removeMusic}
-        onUpdateMusic={updateMusic}
-      ></PlayList1>
-      <PlayListInfo onAddMusic={addMusic}></PlayListInfo>
-      <PlayList2 title="PlayList2"></PlayList2>
+      <Home title="Welcome to my music blog!!"></Home>
+      <Routes>
+        <Route
+          path="/playlist1"
+          element={
+            <PlayList1
+              musics={musics}
+              PlayList="PlayList1"
+              onRemoveMusic={removeMusic}
+              onUpdateMusic={updateMusic}
+            ></PlayList1>
+          }
+        />
+        <Route
+          path="/add1"
+          element={<PlayListInfo onAddMusic={addMusic}></PlayListInfo>}
+        />
+        <Route
+          path="playlist2"
+          element={<PlayList2 title="PlayList2"></PlayList2>}
+        ></Route>
+      </Routes>
       {/* </Card> */}
     </div>
   );

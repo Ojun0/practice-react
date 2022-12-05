@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import PlayListItem from "./PlayListItem";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 function PlayList1({
   PlayList,
@@ -20,6 +21,9 @@ function PlayList1({
   return (
     <div>
       <h1>{PlayList}</h1>
+      <p>
+        <Link to="/add1"> 노래 추가하기</Link>
+      </p>
       <Search
         type="text"
         value={findMusic}

@@ -5,7 +5,6 @@ import PlayListInfo from "./PlayListInfo";
 import styled from "styled-components";
 
 function PlayListItem({
-  // id = "",
   title = "",
   artist = "",
   url = "",
@@ -52,7 +51,6 @@ function PlayListItem({
       </MusicList>
       {editable ? (
         <PlayListInfo
-          // id={id}
           title={title}
           artist={artist}
           url={url}

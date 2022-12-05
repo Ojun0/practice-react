@@ -4,7 +4,6 @@ import ReactPlayer from "react-player";
 import styled from "styled-components";
 
 function PlayListInfo({
-  // id = "",
   title = "",
   artist = "",
   url = "",
@@ -25,11 +24,10 @@ function PlayListInfo({
   const Text = styled.span`
     text-align: left;
     font-size: 20px;
-    background-color: #888;
-    color: white;
     border-radius: 5px;
     background-size: 10px;
   `;
+
   const handleSubmit = (event) => {
     event.preventDefault();
     if (title) {
@@ -40,7 +38,7 @@ function PlayListInfo({
   };
   return (
     <div>
-      <Text>{title}</Text> <Text>{artist}</Text>
+      <Text>{title}</Text> - <Text>{artist}</Text>
       <Player>
         <ReactPlayer
           className="player"
