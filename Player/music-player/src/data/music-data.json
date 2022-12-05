@@ -26,5 +26,31 @@
       "url": "https://youtu.be/js1CtxSY38I"
     }
   ],
-  "playList2": {}
+  "playList2": [
+    {
+      "title": "smiley",
+      "artist": "최예나",
+      "url": "https://www.youtube.com/watch?v=y9kkXTucnLU"
+    },
+    {
+      "title": "cookie",
+      "artist": "newjeans",
+      "url": "https://www.youtube.com/watch?v=GyqqpCOyBos"
+    },
+    {
+      "title": "in the mud",
+      "artist": "오왼",
+      "url": "https://www.youtube.com/watch?v=akoRcMC4_Dw"
+    },
+    {
+      "title": "next level",
+      "artist": "aespa",
+      "url": "https://www.youtube.com/watch?v=ERAMkP92arE&list=RDQMxrx-0Ctb6CI&start_radio=1"
+    },
+    {
+      "title": "antifragile",
+      "artist": "lesserafim",
+      "url": "https://www.youtube.com/watch?v=Yz-d62XD8C0"
+    }
+  ]
 }
