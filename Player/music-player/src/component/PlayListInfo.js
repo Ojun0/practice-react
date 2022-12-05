@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import ReactPlayer from "react-player";
+import styled from "styled-components";
 
 function PlayListInfo({
   // id = "",
@@ -9,12 +10,26 @@ function PlayListInfo({
   url = "",
   onAddMusic = (f) => f,
   onUpdateMusic = (f) => f,
-  onPlayer = (f) => f,
+  // onPlayer = (f) => f,
 }) {
   const [txtTitle, setTitle] = useState(title);
   const [txtArtist, setArtist] = useState(artist);
   const [txtAddress, setAddress] = useState(url);
 
+  const Player = styled.p`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  `;
+
+  const Text = styled.span`
+    text-align: left;
+    font-size: 20px;
+    background-color: #888;
+    color: white;
+    border-radius: 5px;
+    background-size: 10px;
+  `;
   const handleSubmit = (event) => {
     event.preventDefault();
     if (title) {
@@ -25,18 +40,18 @@ function PlayListInfo({
   };
   return (
     <div>
-      <span>{title}</span> <span>{artist}</span>
-      <p>
+      <Text>{title}</Text> <Text>{artist}</Text>
+      <Player>
         <ReactPlayer
           className="player"
           url={"'" + url + "'"}
-          width="700px"
-          heigth="700px"
+          width="750px"
+          heigth="800px"
           playing={true}
           muted={true}
           controls={true}
         />
-      </p>
+      </Player>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import PlayListInfo from "./PlayListInfo";
 // import ReactPlayer from "react-player";
+import styled from "styled-components";
 
 function PlayListItem({
   // id = "",
@@ -12,6 +13,24 @@ function PlayListItem({
   onUpdate = (f) => f,
 }) {
   const [editable, setEditable] = useState(false);
+
+  const Del = styled.button`
+    border-radius: 4px;
+    color: "#eee";
+    border-style: solid;
+    border-width: 1px;
+    margin-left: 10px;
+  `;
+
+  const MusicList = styled.p`
+    margin: 40px;
+  `;
+
+  const Title = styled.span`
+    font-size: 25px;
+    font-weight: bold;
+    color: #444;
+  `;
   // const player = () => {
   //   <ReactPlayer
   //     className="player"
@@ -25,10 +44,12 @@ function PlayListItem({
   // };
   return (
     <div>
-      <p onClick={() => (editable ? setEditable(false) : setEditable(true))}>
-        {title}
-        <button onClick={() => onRemove(title)}>삭제</button>
-      </p>
+      <MusicList
+        onClick={() => (editable ? setEditable(false) : setEditable(true))}
+      >
+        <Title>{title}</Title>
+        <Del onClick={() => onRemove(title)}>삭제</Del>
+      </MusicList>
       {editable ? (
         <PlayListInfo
           // id={id}

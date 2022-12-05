@@ -4,7 +4,7 @@ import PlayList1 from "./component/PlayList1";
 import PlayList2 from "./component/PlayList2";
 import musicdata from "./data/music-data.json";
 import PlayListInfo from "./component/PlayListInfo";
-// import { v4 } from "uuid";
+// import styled from "styled-components";
 
 function App() {
   const [musics, setMusic] = useState(musicdata.playList1);
@@ -25,8 +25,21 @@ function App() {
     );
     setMusic(newMusic);
   };
+
+  // const Card = styled.div`
+  // display: flex;
+  // flex-direction: column;
+  // flex: 1;
+  // min-width: 150px;
+  // height: 200px;
+  // margin: 8px;
+  // background-color: white;
+  // border-radius: 8px;
+  // `;
+
   return (
     <div className="App">
+      {/* <Card> */}
       <PlayList1
         musics={musics}
         PlayList="PlayList1"
@@ -35,6 +48,7 @@ function App() {
       ></PlayList1>
       <PlayListInfo onAddMusic={addMusic}></PlayListInfo>
       <PlayList2 title="PlayList2"></PlayList2>
+      {/* </Card> */}
     </div>
   );
 }
