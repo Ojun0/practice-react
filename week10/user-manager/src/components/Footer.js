@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { ThemeProvider } from "./ThemeProvider";
+import { ThemeContext } from "./ThemeProvider";
 import styles from "../styles/Footer.module.css";
 
 function Footer({ copyright }) {
-  const { changeTheme } = useContext(ThemeProvider);
+  const { changeTheme } = useContext(ThemeContext);
   return (
     <div>
       <h3 className={styles.title}>{copyright}</h3>
