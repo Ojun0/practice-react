@@ -1,67 +1,75 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function Userlist(props) {
-    const userList = [
-        {id: '0001', name: 'park', point: 10},
-        {id: '0002', name: 'oh', point: 30},
-        {id: '0003', name: 'kim', point: 40},
-        {id: '0004', name: 'jin', point: 50},
+  const userList = [
+    { id: "0001", name: "park", point: 10 },
+    { id: "0002", name: "oh", point: 30 },
+    { id: "0003", name: "kim", point: 40 },
+    { id: "0004", name: "jin", point: 50 },
+  ];
 
-    ];
+  function deleteUser(id) {
+    const newUsers = users.filter((user) => id !== user.id);
+    console.log(newUsers);
+    setUsers(newUsers);
+  }
 
-    function deleteUser(id){
-        const newUsers = users.filter((user) => (id !== user.id) )
-        console.log(newUsers);
-        setUsers(newUsers); 
-    };
+  function changeId(event) {
+    setId(event.target.value);
+  }
 
-    function changeId(event){
-        setId(event.target.value);
+  function insertUser(event) {
+    const newUsers = [...users, { id: id, name: name, point: point }];
+    setUsers(newUsers);
+    event.preventDefault();
+  }
 
-    };
+  const [users, setUsers] = useState(userList);
+  const [name, setName] = useState("");
+  const [point, setPoint] = useState("0");
+  const [id, setId] = useState("");
 
-    function insertUser(event){
-        const newUsers = [...users, {id:id , name:name, point:point}];
-        setUsers(newUsers);
-        event.preventDefault();
-    };
-
-    const [users, setUsers] = useState(userList);
-    const [name, setName] = useState('');
-    const [point, setPoint] = useState('0');
-    const [id, setId] = useState('');
-
-    return (
-        <div>
-            {users.map(
-                (user) => (
-                    <div key={user.id}> 
-                        <span>{user.name}, {user.point}</span> 
-                        <button onClick={()=>deleteUser(user.id)}>
-                        삭제</button>
-                    </div>
-                )
-            )}
-            <br/>
-            <form onSubmit={(event)=>insertUser(event)}>
-                <label>
-                    Id:
-                    <input type='text' value={id} onChange={(event)=>changeId(event)}></input>
-                </label>
-                <label>
-                    Name:
-                    <input type='text' value={name} onChange={(event)=>setName(event.target.value)}></input>
-                </label>
-                
-                <label>
-                    Point:
-                    <input type='text' value={point} onChange={(event)=>setPoint(event.target.value)}></input>
-                </label>
-                <input type='submit' value='추가'></input>
-
-            </form>
+  return (
+    <div>
+      {users.map((user) => (
+        <div key={user.id}>
+          <span>
+            {user.name}, {user.point}
+          </span>
+          <button onClick={() => deleteUser(user.id)}>삭제</button>
         </div>
-    );
+      ))}
+      <br />
+      <form onSubmit={(event) => insertUser(event)}>
+        <label>
+          Id:
+          <input
+            type="text"
+            value={id}
+            onChange={(event) => changeId(event)}
+          ></input>
+        </label>
+        <label>
+          Name:
+          <input
+            type="text"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+          ></input>
+        </label>
+
+        <label>
+          Point:
+          <input
+            type="text"
+            value={point}
+            onChange={(event) => setPoint(event.target.value)}
+          ></input>
+        </label>
+        <input type="submit" value="추가"></input>
+      </form>
+    </div>
+  );
 }
 
 export default Userlist;
